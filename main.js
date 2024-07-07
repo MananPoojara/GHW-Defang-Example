@@ -8,6 +8,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.json({ status: 'OK' });
+});
+
+app.get('/image', (req, res) => {
     const imagePath = path.join(__dirname, '/image.png');
     res.sendFile(imagePath);
 });
